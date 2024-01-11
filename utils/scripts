@@ -1,0 +1,9 @@
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d "{\"code\":\"yourNew2FACode\",\"users\":[{\"username\":\"user1\",\"password\":\"password1\"},{\"username\":\"user2\",\"password\":\"password2\"},{\"username\":\"user3\",\"password\":\"password3\"}]}" \
+  http://localhost:3000/vault/add-2fa-code
+
+  curl -X POST \
+  -H "Content-Type: application/json" \
+  -d "{\"users\":[{\"username\":\"user1\",\"password\":\"password1\"},{\"username\":\"user2\",\"password\":\"password2\"}]}" \
+  http://localhost:3000/vault/get-2fa-code
